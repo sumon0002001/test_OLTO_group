@@ -2,11 +2,13 @@ import React from 'react';
 import img from '../assets/img.png'
 import Image from 'react-bootstrap/Image';
 import { Button } from 'react-bootstrap';
+import Modal from './Modal';
 import './App.css';
 
 const TradingSignal = () => {
   return (
     <>
+    
       <div>
         <Image src={img} alt="image" fluid />
       </div>
@@ -34,7 +36,7 @@ const TradingSignal = () => {
    
     <Button variant="secondary" className="mt-2">Statistical Odds</Button>{' '}
     <Button variant="secondary" className="ml-2 mt-2">Trade on Etoro</Button>
-   
+    <Modal />
     </>
   )
 }
