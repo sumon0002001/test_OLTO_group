@@ -23,6 +23,10 @@ export default function Profile() {
 
   return (
     <>
+      <div className="w-100 text-center mt-2">
+      Trading Signals Feed? <Link to="/tradingSignal">Teading Signal</Link>
+      </div>
+    
      <Card>
       <Card.Body>
         <h2 className="text-center mb-4">Profile</h2>
