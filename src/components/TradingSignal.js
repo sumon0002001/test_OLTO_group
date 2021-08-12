@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import img from '../assets/img.png'
 import Image from 'react-bootstrap/Image';
 import { Button } from 'react-bootstrap';
@@ -6,6 +6,7 @@ import Modal from './Modal';
 import './App.css';
 
 const TradingSignal = () => {
+    const [openModal, setOpenModal] = useState(false)
   return (
     <>
     
@@ -34,9 +35,16 @@ const TradingSignal = () => {
       ✅ Optimal Take Profit: 914.52 USD (2.0 stop loss volume)
     </div>
    
-    <Button variant="secondary" className="mt-2">Statistical Odds</Button>{' '}
-    <Button variant="secondary" className="ml-2 mt-2">Trade on Etoro</Button>
-    <Modal />
+    <Button variant="secondary" className="mt-2" onClick= {() => {
+        setOpenModal(true)
+        
+    }}>Statistical Odds</Button>{' '}
+    <Button variant="secondary" className="ml-2 mt-2" onClick={(e) => {
+        e.preventDefault();
+        window.location.href='https://www.etoro.com/markets/tsla';
+    }}>Trade on Etoro</Button>
+    {openModal &&  <Modal closeModal={setOpenModal}/>}
+   
     </>
   )
 }

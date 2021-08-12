@@ -9,6 +9,7 @@ import PrivateRoute from './PrivateRoute';
 import ForgotPassword from './ForgotPassword';
 import UpdateProfile from './UpdateProfile';
 import TradingSignal from './TradingSignal';
+import Chatbot from './ChatApp';
 
 
 const App = () => {
@@ -27,6 +28,7 @@ const App = () => {
           <Route path='/login' component={Login}/>
           <Route path='/forgot-password' component={ForgotPassword}/>
           <Route path ='/tradingSignal' component = {TradingSignal} />
+          <Route path ='/chatbot' component = {Chatbot} />
 
           
         </Switch>

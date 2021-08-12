@@ -41,7 +41,11 @@ export default function Profile() {
       <Button variant="link" onClick={handleLogout}>
         Log out
       </Button>
-    </div>  
+    </div> 
+    <Link to='/chatbot' className="btn btn-primary w-100 mt-3">
+          Chatbot
+    </Link>
+
     </>
     )
 }
